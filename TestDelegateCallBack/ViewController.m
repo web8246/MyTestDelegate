@@ -25,7 +25,7 @@
     //
     MyView *myView = [[MyView alloc] init];
     myView.delegate = self;
-    [myView myViewSetDelegate];
+    [myView myViewSetDelegate];//流程1當我的Task去工作以後（這邊因為省略，所以直接讓他去呼叫）接下來到myView
     myView.frame = CGRectMake(30, 30, 100, 100);
     [self.view addSubview:myView];
     
@@ -36,7 +36,7 @@
     NSLog(@"sss: %@",string);
     
 }
-
+//流程3，當做完以後，會callback來這邊，讓我知道說，ok他做完事情了，接下來就是代理（我）的事情了，我要代理他，繼續完成接下來要處理的事情
 -(void)myView:(MyView *)myView WillGiveADic:(NSDictionary *)dic
 {
     

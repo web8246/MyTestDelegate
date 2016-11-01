@@ -35,6 +35,7 @@
 -(void)myViewSetDelegate
 {
     [self.delegate myView:self WillGiveADic:@{@"a":@"abc"}];
+    //流程2，當我這邊處理完之後，把物件塞進去（這邊是dictionary），然後回到viewcontroller
 }
 
 @end
